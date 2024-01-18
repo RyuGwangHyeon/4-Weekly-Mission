@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>로그인</title>
-    <link rel="stylesheet" href ="login&sign-up.css">
+    <link rel="stylesheet" href ="./src/login&sign-up.css">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
 </head>
 <body>
     <div class="login-page">
@@ -26,8 +27,13 @@
                         <label for="login">
                             비밀번호
                         </label>
-                            <input class="password" name="sighup-password" type="password">
+                        <div class="inputbox-password">  
+                          <input class="password" name="sighup-password" type="password">
+                              <button class="eye-button" type="button">
+                                <img src="./landing/eye-off.svg"></img>
+                              </button>
                             </input>
+                        </div>  
                         <button id="login-button" type="submit">
                             <span class="login-button-text">로그인</span>
                         </button>
