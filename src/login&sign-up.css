@@ -59,9 +59,7 @@ input:focus {
 }
 
 .inputbox-password{
-  position:relative;
-  
-  
+  position:relative;  
 }
 
 .password{
@@ -191,6 +189,8 @@ input:focus {
   position : absolute;
   gap : 16px;
 }
+
+
 
 /* tablet size */
 
