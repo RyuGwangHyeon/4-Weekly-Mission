@@ -2,11 +2,11 @@ const inputEmail=document.querySelector("#email");
 const inputPassword=document.querySelector("#password");
 const inputCheckPassword=document.querySelector("#check-password");
 const emailErrorMessage=document.querySelector(".email-error-message");
-const passwordErrorMessage=document.querySelector(".passwrod-error-message");
-const checkPasswordErrorMessage=document.querySelector(".check-passwrod-error-message");
+const passwordErrorMessage=document.querySelector(".password-error-message");
+const checkPasswordErrorMessage=document.querySelector(".check-password-error-message");
 const form=document.querySelector(".sign-form");
 
-function corretEmail(e){
+function correctEmail(e){
     let emailRegex=new RegExp('[a-z0-9]+@[a-z]+.[a-z]{2,3}');
     
     if(e.target.value===""){
@@ -28,7 +28,7 @@ function corretEmail(e){
     }
 }
 
-function corretPassword(e){
+function correctPassword(e){
     let passwordRegex=new RegExp(/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/);
 
     if(e.target.value === ""){
@@ -46,7 +46,7 @@ function corretPassword(e){
     }
 }
 
-function corretCheckPassword(e){
+function correctCheckPassword(e){
 
     if(e.target.value !== inputPassword.value){
         checkPasswordErrorMessage.textContent="비밀번호가 일치하지 않아요.";
@@ -59,7 +59,7 @@ function corretCheckPassword(e){
     }
 }
 
-function submitButton(e){
+function handleSubmitButton(e){
     e.preventDefault();
     if(inputEmail.value === "test@codeit.com" && inputPassword.value === "codeit101"){
         location.href="/folder.html";
@@ -74,7 +74,7 @@ function submitButton(e){
         inputPassword.classList.add("error-box");
     }
 }
-inputCheckPassword.addEventListener('focusout',corretCheckPassword);
-inputEmail.addEventListener('focusout',corretEmail);
-inputPassword.addEventListener('focusout',corretPassword);
-form.addEventListener('submit',submitButton);
+inputCheckPassword.addEventListener('focusout',correctCheckPassword);
+inputEmail.addEventListener('focusout',correctEmail);
+inputPassword.addEventListener('focusout',correctPassword);
+form.addEventListener('submit',handleSubmitButton);
