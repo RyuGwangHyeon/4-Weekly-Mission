@@ -31,7 +31,7 @@ function correctEmail(e){
 function correctPassword(e){
     let passwordRegex=new RegExp(/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/);
 
-    if(e.target.value === ""){
+    if(e.target.value===""){
         passwordErrorMessage.textContent="비밀번호를 입력해 주세요.";
         passwordErrorMessage.classList.add("error-text");
         e.target.classList.add("error-box");
